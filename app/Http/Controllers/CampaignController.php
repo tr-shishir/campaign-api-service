@@ -32,7 +32,7 @@ class CampaignController extends Controller
 
     public function show(Campaign $campaign)
     {
-        $campaignDetails = $campaign::with('users')->get();
+        $campaignDetails = $campaign::with('users', 'orders')->get();
 
         return response()->json(['campaign' => $campaignDetails]);
     }
@@ -70,6 +70,7 @@ class CampaignController extends Controller
 
     public function updateStatus(Request $request, Campaign $campaign)
     {
+
         $user = Auth::user();
 
         if ($campaign->user_id != $user->id) {

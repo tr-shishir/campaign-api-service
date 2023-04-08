@@ -1,0 +1,900 @@
+{
+	"info": {
+		"_postman_id": "7fc61c97-3266-4cbc-82b8-e2d855dd70af",
+		"name": "Campaign APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "tr2",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "tr@tr.tr2",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "tr",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "tr@tr.tr",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwODA3ODUwLCJleHAiOjE2ODA4MTE0NTAsIm5iZiI6MTY4MDgwNzg1MCwianRpIjoiNk40UkZFZFMxT2kyb205NCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mOC38k_MMSMA3olz9Gd7NO2rCfhm4xmKcUkFCOp3-qw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "tr",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "tr@tr.tr",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/ (store)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "budget",
+							"value": "100",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "default"
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id} (update)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text"
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id} (delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text"
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/status (Update Status)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "Completed",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/join",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/join",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"join"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/leave",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/leave",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"leave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/all/orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/all/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"all",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/collection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/collection",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"collection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/orders/{order_id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/orders/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/campaigns/{id}/orders/{order_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgwOTMwNzY4LCJleHAiOjE2ODA5MzQzNjgsIm5iZiI6MTY4MDkzMDc2OCwianRpIjoiSkhCYXNBR0VGOGlUU2xzUCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Gpy1eXNwu-LdBaCEtd5FRQLE5USNH9jaK_iKrsFx9hY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "budget",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "test des",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "stock_quantity",
+							"value": "5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/campaigns/1/orders/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"campaigns",
+						"1",
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
