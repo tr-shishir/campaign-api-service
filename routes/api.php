@@ -35,6 +35,7 @@ Route::middleware('jwt.auth')->group(function () {
         Route::post('/{campaign}/leave', [CampaignController::class, 'leave']);
 
         Route::get('/all/orders', [OrderController::class, 'index']);
+        Route::post('/{campaign}/collection', [OrderController::class, 'getCollection']);
         Route::post('/{campaign}/orders', [OrderController::class, 'store']);
         Route::put('/{campaign}/orders/{order}', [OrderController::class, 'update']);
         Route::delete('/{campaign}/orders/{order}', [OrderController::class, 'destroy']);

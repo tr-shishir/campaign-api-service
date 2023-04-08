@@ -40,6 +40,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Orders
 
 - `GET /api/campaigns/all/orders` - Get a list of all orders of the user (requires authentication and ownership).
+- `GET /api/campaigns/{id}/collection` - Get the percentage of orders quantity of the campaign (requires authentication).
 - `POST /api/campaigns/{id}/orders` - Place a new order for a campaign (requires authentication) ( params: `quantity` ).
 - `PUT /api/campaigns/{id}/orders/{order_id}` - Update an existing order (requires authentication) ( params: `quantity`, `decrease=true/false` ).
 - `DELETE /api/campaigns/{id}/orders/{order_id}` - Cancel an existing order (requires authentication).

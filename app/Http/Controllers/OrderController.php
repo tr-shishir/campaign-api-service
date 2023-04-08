@@ -15,6 +15,17 @@ class OrderController extends Controller
         return response()->json(['orders' => $orders]);
     }
 
+    public function getCollection(Campaign $campaign)
+    {
+        $totalQuantity = $campaign->orders()->sum('quantity');
+        $collectionPercentage = $campaign->stock_quantity > 0 ? ($totalQuantity / $campaign->stock_quantity) * 100 : 0;
+
+        return response()->json([
+            'total_quantity' => $totalQuantity,
+            'collection_percentage' => $collectionPercentage,
+        ]);
+    }
+
     public function store(Request $request, Campaign $campaign)
     {
         $user = Auth::user();

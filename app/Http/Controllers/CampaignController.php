@@ -10,7 +10,7 @@ class CampaignController extends Controller
 {
     public function index()
     {
-        $campaigns = Campaign::with('user')->get();
+        $campaigns = Campaign::with('user', 'orders')->get();
         return response()->json(['campaigns' => $campaigns]);
     }
 
